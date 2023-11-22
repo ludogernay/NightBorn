@@ -10,17 +10,17 @@ public class swipe_menu : MonoBehaviour
     float[] pos;
 
     // Ajout d'une variable pour stocker la position du bouton actuel
-    private int currentButtonIndex = 0;
+    // private int currentButtonIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         // Ajouter un écouteur d'événements pour le clic sur le bouton
-        Button[] buttons = GetComponentsInChildren<Button>();
-        foreach (Button button in buttons)
-        {
-            button.onClick.AddListener(() => OnButtonClick(button));
-        }
+        // Button[] buttons = GetComponentsInChildren<Button>();
+        // foreach (Button button in buttons)
+        // {
+        //     button.onClick.AddListener(() => OnButtonClick(button));
+        // }
     }
 
     // Update is called once per frame
@@ -66,17 +66,17 @@ public class swipe_menu : MonoBehaviour
     }
 
     // Méthode appelée lorsqu'un bouton est cliqué
-    void OnButtonClick(Button button)
-    {
-        // Récupérer l'index du bouton cliqué
-        int buttonIndex = System.Array.IndexOf(transform.GetComponentsInChildren<Button>(), button);
+    // void OnButtonClick(Button button)
+    // {
+    //     // Récupérer l'index du bouton cliqué
+    //     int buttonIndex = System.Array.IndexOf(transform.GetComponentsInChildren<Button>(), button);
 
-        // Passer au bouton suivant
-        currentButtonIndex = (currentButtonIndex + 1) % pos.Length;
+    //     // Passer au bouton suivant
+    //     currentButtonIndex = (currentButtonIndex + 1) % pos.Length;
 
-        // Reproduire l'effet de slide en ajustant la valeur de la scrollbar
-        scrollbar.GetComponent<Scrollbar>().value = pos[currentButtonIndex];
-    }
+    //     // Reproduire l'effet de slide en ajustant la valeur de la scrollbar
+    //     scrollbar.GetComponent<Scrollbar>().value = pos[currentButtonIndex];
+    // }
 }
 
 // targetButtonIndex = System.Array.IndexOf(transform.GetComponentsInChildren<Button>(), button);
