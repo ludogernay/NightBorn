@@ -50,11 +50,6 @@ public class NightBorn : MonoBehaviour
         {
             maxJumps = 2;
         }
-        if (Input.GetMouseButtonDown(0)){
-            AttackAnim.SetBool("attack",true);
-        }else{
-            AttackAnim.SetBool("attack",false);
-        }
         if (isGrounded && (nightBornRB.velocity.y == 0f))
         {
             jumpsLeft = maxJumps;
@@ -73,6 +68,7 @@ public class NightBorn : MonoBehaviour
     {
         if (!NightBorn_SwordIsActive)
         {
+            AttackAnim.SetBool("attack",true);
             NightBorn_Sword_AttackCooldown = 1.0f;
             NightBorn_Sword_AttackDuration = 0.3f;
             Debug.Log("Night_Born Attack");
@@ -86,6 +82,7 @@ public class NightBorn : MonoBehaviour
     {
         NightBorn_Sword_AttackCooldown -= Time.deltaTime;
         NightBorn_Sword_AttackDuration -= Time.deltaTime;
+        AttackAnim.SetBool("attack",false);
         if (NightBorn_Sword_AttackDuration <= 0)
         {
             NightBorn_Sword.enabled = false;
