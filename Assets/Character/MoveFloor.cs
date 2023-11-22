@@ -14,6 +14,6 @@ public class MoveFloor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        wall.transform.position = new Vector2(wall.transform.position.x - 0.005f, wall.transform.position.y);
+        wall.transform.position = new Vector2(wall.transform.position.x - 0.05f, wall.transform.position.y);
     }
 }
