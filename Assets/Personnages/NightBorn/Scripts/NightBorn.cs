@@ -10,7 +10,7 @@ public class NightBorn : MonoBehaviour
 
     public float NightBorn_Sword_AttackDuration = 1.0f;
 
-    public float NightBorn_Sword_AttackCooldown = 1.0f;
+    public float NightBorn_Sword_AttackCooldown = 0.5f;
 
     public bool NightBorn_SwordIsActive = false;
     public Transform groundCheckLeft;
@@ -69,7 +69,7 @@ public class NightBorn : MonoBehaviour
         if (!NightBorn_SwordIsActive)
         {
             AttackAnim.SetBool("attack",true);
-            NightBorn_Sword_AttackCooldown = 1.0f;
+            NightBorn_Sword_AttackCooldown = 0.5f;
             NightBorn_Sword_AttackDuration = 0.3f;
             Debug.Log("Night_Born Attack");
             NightBorn_Sword.enabled = true;
