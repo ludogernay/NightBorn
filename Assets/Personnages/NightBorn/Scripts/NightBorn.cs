@@ -19,10 +19,12 @@ public class NightBorn : MonoBehaviour
     private int maxJumps = 1; // Nombre maximum de sauts
     private bool isGrounded;
     private int jumpsLeft;
+    public Animator AttackAnim;
 
     // Start is called before the first frame update
     void Start()
     {
+        nightBornRB=GetComponent<Rigidbody2D>();
         jumpsLeft = maxJumps;
     }
 
@@ -47,6 +49,11 @@ public class NightBorn : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             maxJumps = 2;
+        }
+        if (Input.GetMouseButtonDown(0)){
+            AttackAnim.SetBool("attack",true);
+        }else{
+            AttackAnim.SetBool("attack",false);
         }
         if (isGrounded && (nightBornRB.velocity.y == 0f))
         {
