@@ -67,7 +67,7 @@ public class NightBorn : MonoBehaviour
         if (!NightBorn_SwordIsActive)
         {
             NightBorn_Sword_AttackCooldown = 1.0f;
-            NightBorn_Sword_AttackDuration = 1.0f;
+            NightBorn_Sword_AttackDuration = 0.3f;
             Debug.Log("Night_Born Attack");
             NightBorn_Sword.enabled = true;
             NightBorn_SwordIsActive = true;
