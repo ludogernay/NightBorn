@@ -5,15 +5,17 @@ using UnityEngine;
 public class MoveFloor : MonoBehaviour
 {
     public GameObject wall;
+
+    public float speedGround ;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        wall.transform.position = new Vector2(wall.transform.position.x - 0.05f, wall.transform.position.y);
+        wall.transform.position = new Vector2(wall.transform.position.x - speedGround, wall.transform.position.y);
     }
 }

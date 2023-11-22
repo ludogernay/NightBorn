@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 1938032740}
+  speedGround: 0.4
 --- !u!61 &1938032742
 BoxCollider2D:
   m_ObjectHideFlags: 0
