@@ -26,6 +26,7 @@ public class NightBorn : MonoBehaviour
     {
         nightBornRB=GetComponent<Rigidbody2D>();
         jumpsLeft = maxJumps;
+        NightBorn_Sword.enabled = false;
     }
 
     void Update()

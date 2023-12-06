@@ -298,7 +298,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -488533507, guid: a5c3fbd5050963a44ad36872d1523727, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -319,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 80455213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.089, y: -3.086, z: 0}
+  m_LocalPosition: {x: -5.29, y: -3.086, z: 0}
   m_LocalScale: {x: 4.82502, y: 5.6, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 1938032744}
   - component: {fileID: 1938032743}
   - component: {fileID: 1938032742}
-  - component: {fileID: 1938032741}
+  - component: {fileID: 1938032745}
   m_Layer: 0
   m_Name: Mur 1
   m_TagString: Untagged
@@ -708,20 +708,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1938032741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938032740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3fdcb7c6a4e7fc4598003b27412bc87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wall: {fileID: 1938032740}
-  speedGround: 0.35
 --- !u!61 &1938032742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -828,12 +814,26 @@ Transform:
   m_GameObject: {fileID: 1938032740}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8200006, y: -3.0518, z: 0}
+  m_LocalPosition: {x: 9.61, y: -3.0518, z: 0}
   m_LocalScale: {x: 1, y: 1.99646, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1938032745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938032740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3fdcb7c6a4e7fc4598003b27412bc87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 1938032740}
+  speedGround: 0.3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
