@@ -533,13 +533,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5da9c7714a2c0a54b96ac109aad4e9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 80455219}
-  vitesseSuivi: 100
+  vitesseSuivi: 20
 --- !u!1 &1209771330
 GameObject:
   m_ObjectHideFlags: 0
