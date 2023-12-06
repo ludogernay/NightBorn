@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameState state;
 
-    public static event Action<GameState> onStateChange;
+    public static event Action<GameState> onStateChanged;
 
     void Awake()
     {
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
-        onStateChange?.Invoke(newState);
+        onStateChanged?.Invoke(newState);
     }
     private void openMenu()
     {
