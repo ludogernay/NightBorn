@@ -206,7 +206,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 9.81
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initPositionX: -5
+  VitesseReplacement: 1
   player: {fileID: 80455219}
 --- !u!1 &335378931
 GameObject:
@@ -405,7 +406,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.33, y: 0.04}
+  m_Offset: {x: 0.33, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -533,13 +534,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5da9c7714a2c0a54b96ac109aad4e9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 80455219}
-  vitesseSuivi: 20
+  vitesseSuivi: 1000
 --- !u!1 &1209771330
 GameObject:
   m_ObjectHideFlags: 0
