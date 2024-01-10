@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public void ChangeScene(string SampleScene)
+    public void ChangeScene(string Scene)
     {
         // Charger la scène spécifiée
-        SceneManager.LoadScene(SampleScene);
+        SceneManager.LoadScene(Scene);
     }
 }
     // public void NxtScene()
