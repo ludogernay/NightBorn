@@ -641,6 +641,7 @@ GameObject:
   - component: {fileID: 732892930}
   - component: {fileID: 732892929}
   - component: {fileID: 732892928}
+  - component: {fileID: 732892931}
   m_Layer: 5
   m_Name: QUIT
   m_TagString: Untagged
@@ -711,7 +712,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732892929}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 732892931}
+        m_TargetAssemblyTypeName: Quit, Assembly-CSharp
+        m_MethodName: QuitterJeu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &732892929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,6 +763,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732892926}
   m_CullTransparentMesh: 1
+--- !u!114 &732892931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732892926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755ace8ae6a9f7c4b8194e9480007ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &815081297
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,10 +1008,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caeb2fadc253c784ba9923931c2a8236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nightBornRB: {fileID: 1226871446}
-  groundCheckLeft: {fileID: 1745962403}
-  groundCheckRight: {fileID: 1455574722}
-  jumpForce: 26
 --- !u!61 &1226871445
 BoxCollider2D:
   m_ObjectHideFlags: 0
