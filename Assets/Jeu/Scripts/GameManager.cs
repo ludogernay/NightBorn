@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameState state;
 
-    public static event Action<GameState> onStateChanged;
+    public static event Action<GameState> onGameStateChanged;
 
     void Awake()
     {
@@ -28,22 +28,37 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.Menu:
-                openMenu();
+                HandleOpenMenu();
                 break;
             case GameState.Playing:
+                HandlePLaying();
                 break;
             case GameState.GameOver:
+                HandleGameOver();
                 break;
             case GameState.Victory:
+                HandleVictory();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
-        onStateChanged?.Invoke(newState);
+        onGameStateChanged?.Invoke(newState);
     }
-    private void openMenu()
+    private void HandleOpenMenu()
     {
         // Open menu
+    }
+    private void HandlePLaying()
+    {
+        // playing
+    }
+    private void HandleGameOver()
+    {
+        // playing
+    }
+    private void HandleVictory()
+    {
+        // Victory screen
     }
 }
 
