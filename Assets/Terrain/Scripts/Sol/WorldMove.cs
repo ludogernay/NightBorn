@@ -5,7 +5,6 @@ using UnityEngine;
 public class WorldMove : MonoBehaviour
 {
     public GameObject wall;
-    public GameObject Background;
 
     public float speedGround ;
 
