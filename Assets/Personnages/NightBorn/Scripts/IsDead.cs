@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IsDead : MonoBehaviour
 {
@@ -8,9 +10,9 @@ public class IsDead : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (player.position.x < -16)
+        if (player.position.x < -15.2)
         {
-            Debug.Log("You are dead");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
