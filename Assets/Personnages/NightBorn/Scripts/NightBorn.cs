@@ -12,6 +12,8 @@ public class NightBorn : MonoBehaviour
     private bool isGrounded;
     private int jumpsLeft;
 
+    public static NightBorn instance;
+
 
     // Start is called before the first frame update
     void Start()
