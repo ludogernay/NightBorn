@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 80455216}
   - component: {fileID: 80455215}
   - component: {fileID: 80455214}
-  - component: {fileID: 80455220}
   m_Layer: 0
   m_Name: NightBorn
   m_TagString: Untagged
@@ -323,20 +322,6 @@ Transform:
   - {fileID: 1209771331}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &80455220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80455213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c950e7ff6d01b04e9d67163e0b2d5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseDeplacement: 15
-  inertie: 0.05
 --- !u!1 &158587839
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementScale: {x: 0.9, y: 0.9, z: 0.9}
+  scrollSpeed: 0.25
+  ground: {fileID: 1938032744}
 --- !u!212 &158587842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -430,7 +417,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 100, y: 3.24}
+  m_Size: {x: 500, y: 3.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -485,7 +472,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -567,20 +553,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c950e7ff6d01b04e9d67163e0b2d5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseDeplacement: 15
-  inertie: 0.05
 --- !u!1 &675112059
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756c427542c8bf248974e85a0b03f536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScale: {x: 0.97, y: 0.97, z: 0.97}
+  movementScale: {x: 0.8, y: 0.8, z: 0.8}
+  scrollSpeed: 0.25
+  ground: {fileID: 1938032744}
 --- !u!212 &675112062
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -674,7 +648,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 100, y: 3.24}
+  m_Size: {x: 500, y: 3.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -764,7 +738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756c427542c8bf248974e85a0b03f536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScale: {x: 0.85, y: 0.85, z: 0.85}
+  movementScale: {x: 0.95, y: 0.95, z: 0.95}
+  scrollSpeed: 0.25
+  ground: {fileID: 1938032744}
 --- !u!212 &807142655
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -811,7 +787,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 100, y: 3.24}
+  m_Size: {x: 500, y: 3.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -896,8 +872,7 @@ Transform:
   m_LocalPosition: {x: -2.19, y: 0.13, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1685435038}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209771330
@@ -942,6 +917,7 @@ GameObject:
   - component: {fileID: 1267378359}
   - component: {fileID: 1267378358}
   - component: {fileID: 1267378357}
+  - component: {fileID: 1267378360}
   m_Layer: 0
   m_Name: Sol
   m_TagString: Untagged
@@ -1055,12 +1031,27 @@ Transform:
   m_GameObject: {fileID: 1267378356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35, y: -4.51, z: 0}
+  m_LocalPosition: {x: 0.3499999, y: -4.51, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267378360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267378356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3fdcb7c6a4e7fc4598003b27412bc87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 1938032740}
+  Background: {fileID: 0}
+  speedGround: 0.25
 --- !u!1 &1423790714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,6 +1092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1685435038}
+  - component: {fileID: 1685435039}
   m_Layer: 0
   m_Name: ContainerOneBackground
   m_TagString: Untagged
@@ -1116,9 +1108,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685435037}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1933684793}
@@ -1126,8 +1118,22 @@ Transform:
   - {fileID: 158587840}
   - {fileID: 1918676979}
   - {fileID: 675112060}
-  m_Father: {fileID: 819015927}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685435039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685435037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c950e7ff6d01b04e9d67163e0b2d5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseDeplacement: 5
+  inertie: 0.05
 --- !u!1 &1918676978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756c427542c8bf248974e85a0b03f536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScale: {x: 0.95, y: 0.95, z: 0.95}
+  movementScale: {x: 0.85, y: 0.85, z: 0.85}
+  scrollSpeed: 0.25
+  ground: {fileID: 1938032744}
 --- !u!212 &1918676981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1221,7 +1229,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 100, y: 3.24}
+  m_Size: {x: 500, y: 3.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1311,7 +1319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756c427542c8bf248974e85a0b03f536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScale: {x: 0.8, y: 0.8, z: 0.8}
+  movementScale: {x: 0.97, y: 0.97, z: 0.97}
+  scrollSpeed: 0.25
+  ground: {fileID: 1938032744}
 --- !u!212 &1933684795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1358,7 +1368,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 100, y: 3.24}
+  m_Size: {x: 500, y: 3.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1538,6 +1548,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1938032744}
   - {fileID: 80455219}
-  - {fileID: 1267378359}
   - {fileID: 519420032}
   - {fileID: 819015927}
+  - {fileID: 1267378359}
+  - {fileID: 1685435038}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveFloor : MonoBehaviour
 {
     public GameObject wall;
+    public GameObject Background;
 
     public float speedGround ;
     // Start is called before the first frame update
