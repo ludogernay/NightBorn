@@ -136,7 +136,10 @@ GameObject:
   - component: {fileID: 80455217}
   - component: {fileID: 80455216}
   - component: {fileID: 80455215}
-  - component: {fileID: 80455214}
+  - component: {fileID: 80455221}
+  - component: {fileID: 80455220}
+  - component: {fileID: 80455222}
+  - component: {fileID: 80455223}
   m_Layer: 0
   m_Name: NightBorn
   m_TagString: Untagged
@@ -220,7 +223,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 9.81
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -314,15 +317,77 @@ Transform:
   m_GameObject: {fileID: 80455213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.089, y: -3.3, z: 0}
-  m_LocalScale: {x: 4.82502, y: 5.5998497, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -5, y: -3.086, z: 0}
+  m_LocalScale: {x: 4.82502, y: 5.6, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1423790715}
   - {fileID: 1209771331}
+  - {fileID: 335378933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &158587839
+--- !u!114 &80455220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc7edd3aa1799d438564579d347a2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NightBorn_Sword: {fileID: 335378932}
+  NightBorn_Sword_AttackDuration: 1
+  NightBorn_Sword_AttackCooldown: 1
+  NightBorn_SwordIsActive: 0
+  AttackAnim: {fileID: 80455217}
+--- !u!114 &80455221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2494b6e94ab6e54cacb0d9d12f0c6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nightBornRB: {fileID: 80455216}
+  groundCheckLeft: {fileID: 1423790715}
+  groundCheckRight: {fileID: 1209771331}
+  jumpForce: 26
+--- !u!114 &80455222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da70bd59694d744597a67682dd9c864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initPositionX: -5
+  VitesseReplacement: 1
+  player: {fileID: 80455219}
+--- !u!114 &80455223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e6ca7c29fcc5d4f8f89196623bae99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 80455219}
+--- !u!1 &335378931
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,26 +395,69 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 158587840}
-  - component: {fileID: 158587843}
-  - component: {fileID: 158587842}
-  - component: {fileID: 158587841}
+  - component: {fileID: 335378933}
+  - component: {fileID: 335378932}
   m_Layer: 0
-  m_Name: Background (2)
+  m_Name: NightBorn_Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &158587840
+--- !u!61 &335378932
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335378931}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.33, y: 0.06}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 0.4}
+  m_EdgeRadius: 0
+--- !u!4 &335378933
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158587839}
+  m_GameObject: {fileID: 335378931}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -472,6 +580,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -899,8 +1008,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209771330}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.025, y: -0.1304, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.024999999, y: -0.136, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1076,8 +1185,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423790714}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.121, y: -0.1304, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12099992, y: -0.137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1423,6 +1532,7 @@ GameObject:
   - component: {fileID: 1938032744}
   - component: {fileID: 1938032743}
   - component: {fileID: 1938032742}
+  - component: {fileID: 1938032745}
   m_Layer: 0
   m_Name: Mur 1
   m_TagString: Untagged
@@ -1536,12 +1646,26 @@ Transform:
   m_GameObject: {fileID: 1938032740}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8200006, y: -3.0518, z: 0}
+  m_LocalPosition: {x: 9.61, y: -3.0518, z: 0}
   m_LocalScale: {x: 1, y: 1.99646, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1938032745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938032740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3fdcb7c6a4e7fc4598003b27412bc87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 1938032740}
+  speedGround: 0.3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
