@@ -210,13 +210,13 @@ MonoBehaviour:
       - m_Target: {fileID: 517289008}
         m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &517289006
@@ -269,7 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50016d2fbbe36ab40be5ca3908270dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Level1
 --- !u!1 &563307799
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,13 +356,13 @@ MonoBehaviour:
       - m_Target: {fileID: 563307804}
         m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: LevelMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &563307802
@@ -416,7 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50016d2fbbe36ab40be5ca3908270dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: LevelMenu
 --- !u!1 &601578919
 GameObject:
   m_ObjectHideFlags: 0
