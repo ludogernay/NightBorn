@@ -41,7 +41,7 @@ namespace Platformer.View
             }
 
             // Obtenez la position du sol et appliquez le facteur d'échelle et la vitesse de défilement
-            Vector3 targetPosition = new Vector3(ground.position.x, ground.position.y+5, transform.position.z);
+            Vector3 targetPosition = new Vector3(ground.position.x, 0, transform.position.z);
             transform.position = Vector3.Scale(targetPosition, movementScale) * scrollSpeed;
         }
 
