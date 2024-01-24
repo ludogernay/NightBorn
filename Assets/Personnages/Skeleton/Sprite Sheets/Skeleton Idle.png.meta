@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d65c6d44e463a7a4fb3d3bc03ec3fe18
+guid: ebbf55627e4e27e49b1222f5095caf89
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -82,19 +82,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -132,17 +119,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss 1 Death_0
+      name: Skeleton Idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 49
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f31a488ad8ea7943b8257b85c463e02
-      internalID: -794172588
+      spriteID: b32a8ee55d5d6aa419ac371f7aa32347
+      internalID: -2081766736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss 1 Death_1
+      name: Skeleton Idle_1
       rect:
         serializedVersion: 2
-        x: 97
+        x: 24
         y: 0
-        width: 60
-        height: 49
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dd6b9e3e165399488d4392dbadecf63
-      internalID: -451950313
+      spriteID: 0db509465b2339d46b9032d8e440b26c
+      internalID: 1290696229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss 1 Death_2
+      name: Skeleton Idle_2
       rect:
         serializedVersion: 2
-        x: 194
+        x: 48
         y: 0
-        width: 60
-        height: 49
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa366c564b10f8641993e893e27265f9
-      internalID: -865980691
+      spriteID: 0a0cea7bcc3e9064684f1e3532434b03
+      internalID: -1660886767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss 1 Death_3
+      name: Skeleton Idle_3
       rect:
         serializedVersion: 2
-        x: 291
+        x: 72
         y: 0
-        width: 60
-        height: 49
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9634bdf53c4525e4abda982b5d437c8d
-      internalID: -1907701631
+      spriteID: 18eb878e0a5aca94e849d8aad1cca92f
+      internalID: 590642054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss 1 Death_4
+      name: Skeleton Idle_4
       rect:
         serializedVersion: 2
-        x: 388
+        x: 96
         y: 0
-        width: 60
-        height: 49
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66d25458fea7a3944b6899bfdff28ead
-      internalID: -185953320
+      spriteID: b940eb7f526dc844689a43e208d15c68
+      internalID: -164695900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss 1 Death_5
+      name: Skeleton Idle_5
       rect:
         serializedVersion: 2
-        x: 485
+        x: 120
         y: 0
-        width: 60
-        height: 49
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,8 +255,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7db8568561f087a43b2c4ee8f870a967
-      internalID: -1622109715
+      spriteID: d657293ded2b3e242a7cce5e11692132
+      internalID: 59750308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Idle_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22353ea225b0624a979fa23f8f06a33
+      internalID: 72816792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Idle_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09399c27051efb3499b3f7822b1b0031
+      internalID: -289788681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Idle_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9a29d33916c764bb6d79da6427cf88
+      internalID: -82788272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Idle_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c294a15ff2bd948a4310ab08eda324
+      internalID: -422736411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Idle_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a753a702e24544ca2ab57470b6b764
+      internalID: 162558578
       vertices: []
       indices: 
       edges: []
@@ -272,12 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss 1 Death_0: -794172588
-      boss 1 Death_1: -451950313
-      boss 1 Death_2: -865980691
-      boss 1 Death_3: -1907701631
-      boss 1 Death_4: -185953320
-      boss 1 Death_5: -1622109715
+      Skeleton Idle_0: -2081766736
+      Skeleton Idle_1: 1290696229
+      Skeleton Idle_10: 162558578
+      Skeleton Idle_2: -1660886767
+      Skeleton Idle_3: 590642054
+      Skeleton Idle_4: -164695900
+      Skeleton Idle_5: 59750308
+      Skeleton Idle_6: 72816792
+      Skeleton Idle_7: -289788681
+      Skeleton Idle_8: -82788272
+      Skeleton Idle_9: -422736411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
