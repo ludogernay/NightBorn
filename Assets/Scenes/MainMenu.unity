@@ -1088,10 +1088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caeb2fadc253c784ba9923931c2a8236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nightBornRB: {fileID: 1226871446}
-  groundCheckLeft: {fileID: 1745962403}
-  groundCheckRight: {fileID: 1455574722}
-  jumpForce: 26
 --- !u!61 &1226871445
 BoxCollider2D:
   m_ObjectHideFlags: 0
