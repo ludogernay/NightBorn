@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 50379017584558571}
   - component: {fileID: 276919670136673409}
   - component: {fileID: 3492392637306123054}
+  - component: {fileID: 6887761160249650868}
   m_Layer: 0
   m_Name: drone 1 Idle_0
   m_TagString: Untagged
@@ -149,6 +150,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &6887761160249650868
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5291918699061138883}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 02f9287fdc0513f4f8a0a508d00025a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5321339067788029565
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +182,6 @@ GameObject:
   - component: {fileID: 3651415654928424631}
   - component: {fileID: 3394586428675352519}
   - component: {fileID: 6868042316711832326}
-  - component: {fileID: -3586326460683841058}
   - component: {fileID: 6607538253224421262}
   m_Layer: 0
   m_Name: Patrol Drone
@@ -215,27 +236,6 @@ MonoBehaviour:
   pointG: {fileID: 6354620700457383014}
   pointD: {fileID: 5651135423959161791}
   speed: 1
---- !u!95 &-3586326460683841058
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5321339067788029565}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02f9287fdc0513f4f8a0a508d00025a1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6607538253224421262
 MonoBehaviour:
   m_ObjectHideFlags: 0
