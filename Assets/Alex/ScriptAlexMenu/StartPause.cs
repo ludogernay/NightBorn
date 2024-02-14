@@ -11,7 +11,10 @@ public class StartPause : MonoBehaviour
     {
         StartCoroutine(StartCountdown());
     }
-
+    public void StartCountdownButton()
+    {
+        StartCoroutine(StartCountdown());
+    }
     IEnumerator StartCountdown()
     {
         float currentTime = countdownTime;
