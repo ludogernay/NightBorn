@@ -9,8 +9,6 @@ public class PersonnageController : MonoBehaviour
     private Vector3 vitesse = Vector3.zero;
     // private Animator animator; // Référence à l'Animator
 
-    private bool isFacingRight = true; // Booléen pour déterminer la direction
-
     private void Start()
     {
         // Obtenez une référence à l'Animator attaché au GameObject
