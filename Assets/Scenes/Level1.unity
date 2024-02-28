@@ -3185,8 +3185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c950e7ff6d01b04e9d67163e0b2d5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseDeplacement: 5
-  inertie: 0.05
 --- !u!1 &1879539166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,7 +3304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43490f4fbe127af41bf79000ea36e242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 438567318}
 --- !u!114 &1879539172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3814,8 +3811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103ad570af3566b498cd52b925899a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeText: {fileID: 807459493}
-  maxTime: 60
 --- !u!114 &2138975472
 MonoBehaviour:
   m_ObjectHideFlags: 0
