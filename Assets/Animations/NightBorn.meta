@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Animations/NightBorn.meta
 guid: d425660a1b3772145b5f20c19c5caf96
-========
-guid: f537eb2335ab6fd47a4327b15743942d
->>>>>>>> ludo:Assets/Prefabs/NightBorn.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -3242,21 +3242,6 @@ Transform:
   - {fileID: 675112060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &1685435039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685435037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c950e7ff6d01b04e9d67163e0b2d5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
->>>>>>> ludo
 --- !u!1 &1879539166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3362,35 +3347,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< HEAD
---- !u!114 &1879539171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879539166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43490f4fbe127af41bf79000ea36e242, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1879539172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879539166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b3954ca9413c64ebb3584e94345ed7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownText: {fileID: 2054792820}
-  countdownTime: 3
-=======
->>>>>>> ludo
 --- !u!1 &1913413597
 GameObject:
   m_ObjectHideFlags: 0
@@ -3884,10 +3840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103ad570af3566b498cd52b925899a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
   gamemanager: {fileID: 0}
->>>>>>> ludo
 --- !u!114 &2138975472
 MonoBehaviour:
   m_ObjectHideFlags: 0
