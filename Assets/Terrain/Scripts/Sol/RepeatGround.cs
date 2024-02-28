@@ -13,25 +13,32 @@ public class RepeatGround : MonoBehaviour
 
     private Tilemap lastground;
 
-    private float pos;
+    private List<Tilemap> groundList = new List<Tilemap>();
+
+    private Vector3 posSpawn;
 
     private void Start()
     {
-        Debug.Log("OE");
-        pos = firstground.transform.position.x;
-        CreateGround();
+        posSpawn = firstground.transform.position;
+        groundList.Add(firstground);
     }
 
     private void Update(){
-        if(firstground.transform.position.x < MainCamera.transform.position.x - 530f){
-            firstground = lastground;
+        if (groundList.Count == 0) return;
+        if(groundList[groundList.Count-1].transform.position.x < MainCamera.transform.position.x - 530f){
             CreateGround();
         }
     }
 
     private void CreateGround(){
-        Tilemap newTilemap = Instantiate(GroundPrefab, new Vector2(pos, 4f + 0.5899966f + 0.3300040f), Quaternion.identity, transform);
-        lastground = newTilemap;
-        pos += 124f;
+        if (groundList.Count <= 1){
+            Tilemap newTilemap = Instantiate(GroundPrefab, new Vector2(posSpawn.x, 4f + 0.5899966f + 0.3300040f), Quaternion.identity, transform);
+            groundList.Add(newTilemap);
+        }else{
+            Tilemap newTilemap = groundList[0];
+            newTilemap.transform.position = new Vector2(posSpawn.x, 4f + 0.5899966f + 0.3300040f);
+            groundList.RemoveAt(0);
+            groundList.Add(newTilemap);
+        }
     }
 }
