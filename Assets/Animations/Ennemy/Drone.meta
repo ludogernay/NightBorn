@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Ennemy/Drone.meta
 guid: 834dda9df6ef62a4baf508bba802aee1
+========
+guid: d425660a1b3772145b5f20c19c5caf96
+>>>>>>>> ludo:Assets/Animations/NightBorn.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
