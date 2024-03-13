@@ -1,24 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public BoxCollider2D NightBorn_Sword;
+    [SerializeField] private BoxCollider2D nightBornSword;
+    [SerializeField] private float attackDuration = 0.3f;
+    [SerializeField] private float attackCooldown = 0.5f;
+    [SerializeField] private Animator attackAnim;
 
-    public float NightBorn_Sword_AttackDuration = 1.0f;
+    [SerializeField] private bool swordIsActive;
 
-    public float NightBorn_Sword_AttackCooldown = 1.0f;
-
-    public bool NightBorn_SwordIsActive = false;
-    public Animator AttackAnim;
-    public void Start()
+    private void Start()
     {
-        NightBorn_Sword.enabled = false;
+        nightBornSword.enabled = false;
+        swordIsActive = false;
     }
-    public void Update()
+
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && NightBorn_Sword_AttackCooldown <= 0)
+        if (Input.GetMouseButtonDown(1) && attackCooldown <= 0)
         {
             PlayerAttack();
         }
@@ -27,27 +27,28 @@ public class Attack : MonoBehaviour
             EndPlayerAttack();
         }
     }
-    void PlayerAttack()
+
+    private void PlayerAttack()
     {
-        if (!NightBorn_SwordIsActive)
+        if (!swordIsActive)
         {
-            AttackAnim.SetBool("attack",true);
-            NightBorn_Sword_AttackCooldown = 1.0f;
-            NightBorn_Sword_AttackDuration = 0.3f;
-            NightBorn_Sword.enabled = true;
-            NightBorn_SwordIsActive = true;
+            attackDuration = 0.3f;
+            attackCooldown = 0.5f;
+            attackAnim.SetBool("attack", true);
+            nightBornSword.enabled = true;
+            swordIsActive = true;
         }
     }
 
-    void EndPlayerAttack()
+    private void EndPlayerAttack()
     {
-        NightBorn_Sword_AttackCooldown -= Time.deltaTime;
-        NightBorn_Sword_AttackDuration -= Time.deltaTime;
-        AttackAnim.SetBool("attack",false);
-        if (NightBorn_Sword_AttackDuration <= 0)
+        attackDuration -= Time.deltaTime;
+        attackAnim.SetBool("attack", false);
+        if (attackDuration <= 0)
         {
-            NightBorn_Sword.enabled = false;
-            NightBorn_SwordIsActive = false;
+            attackCooldown -= Time.deltaTime;
+            nightBornSword.enabled = false;
+            swordIsActive = false;
         }
     }
 }
