@@ -14,7 +14,7 @@ public class AttackController : MonoBehaviour
     private float elapsedTime;
     private void Start()
     {
-        InvokeRepeating("ActivateAttackAnimation", 0f, 3f);
+        InvokeRepeating("ActivateAttack", 0f, 3f);
     }
 
     private void Update()
@@ -28,13 +28,14 @@ public class AttackController : MonoBehaviour
 
     }
 
-    private void ActivateAttackAnimation()
+    private void ActivateAttack()
     {
         elapsedTime = 0;
         animator.SetBool("isBulleting", true);
         Invoke("CreateBullet", bulletDelay);
         Invoke("CreateBullet", bulletDelay * 2);
         Invoke("CreateBullet", bulletDelay * 3);
+        animator.SetBool("isBulleting", true);
     }
 
     private void CreateBullet()

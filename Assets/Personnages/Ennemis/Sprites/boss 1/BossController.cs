@@ -22,12 +22,12 @@ public class BossController : MonoBehaviour
     void UpdateHPView(){
         hpText.text = "HP: " + currentHP.ToString();
 
-        Color textColor = Color.green;
+        Color textColor = Color.red;
 
-        float percentage = (float)currentHP / maxHP;
+        float percentage = currentHP / maxHP;
         if (percentage <= 0.5f)
         {
-            textColor = Color.Lerp(Color.yellow, Color.red, (0.5f - percentage) * 2);
+            textColor = Color.Lerp(Color.red, Color.yellow, (0.5f - percentage) * 2);
         }
 
         hpText.color = textColor;
