@@ -30,9 +30,12 @@ public class DecorScript : MonoBehaviour
         }
     }
 
-    public void RecevoirDegats(int degats)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        pointsDeVie -= degats;
+        if (collision.gameObject.CompareTag("Sword"))
+        {
+            pointsDeVie--;
+        }
     }
 
     IEnumerator Death()
