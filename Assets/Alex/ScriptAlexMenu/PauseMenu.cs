@@ -9,10 +9,6 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject ParametreUI;
-    // public TMP_Dropdown res;
-    // public Slider VolumeSlider;
-    // public TextMeshProUGUI Volume;
-    // public TextMeshProUGUI textMeshPro;
 
     public static bool gamepause = false;
     public static bool param = false;
@@ -44,9 +40,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Paused()
     {
-        if (NightBorn.instance != null)
+        // if (NightBorn.instance != null)
         {
-            NightBorn.instance.enabled = false;
+            // NightBorn.instance.enabled = false;
         }
 
         pauseMenuUI.SetActive(true);
@@ -57,9 +53,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        if (NightBorn.instance != null)
+        // if (NightBorn.instance != null)
         {
-            NightBorn.instance.enabled = true;
+            // NightBorn.instance.enabled = true;
         }
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
@@ -68,7 +64,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitReturnToMenu()
     {
-        NightBorn.instance.enabled = true;
+        // NightBorn.instance.enabled = true;
         gamepause = false; 
         SceneManager.LoadScene("LevelMenu");
     }
