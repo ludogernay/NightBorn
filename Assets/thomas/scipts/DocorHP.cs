@@ -38,7 +38,7 @@ public class DecorScript : MonoBehaviour
         }
     }
 
-    IEnumerator Death()
+    private IEnumerator Death()
     {
         isDead = true;
         _particleSystem.Play();
