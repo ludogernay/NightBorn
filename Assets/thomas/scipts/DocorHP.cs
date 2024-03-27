@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class DecorScript : MonoBehaviour
 {
-    public int pointsDeVie = 2;
+    [SerializeField] private int pointsDeVie = 1;
 
     [SerializeField] ParticleSystem _particleSystem;
 
@@ -30,7 +30,7 @@ public class DecorScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Sword"))
         {
