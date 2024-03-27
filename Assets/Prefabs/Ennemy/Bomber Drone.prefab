@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5930204829665616276}
-  - component: {fileID: 7355605347153958257}
   m_Layer: 0
   m_Name: Bomber Drone
   m_TagString: Untagged
@@ -33,19 +32,6 @@ Transform:
   - {fileID: 5410338670878531221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7355605347153958257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3771196828754484657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb83f061af2fe474a82513cc4f5020e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: Bomber Drone
 --- !u!1 &4747128417951249228
 GameObject:
   m_ObjectHideFlags: 0
