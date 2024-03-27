@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1) && attackCooldown <= 0)
+        if (Input.GetMouseButtonDown(0) && attackCooldown <= 0)
         {
             PlayerAttack();
         }
