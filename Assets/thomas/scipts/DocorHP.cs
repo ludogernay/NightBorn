@@ -4,31 +4,46 @@ using UnityEngine.Tilemaps;
 
 public class DecorScript : MonoBehaviour
 {
-    [SerializeField] private int pointsDeVie = 2;
-
-    [SerializeField] ParticleSystem _particleSystem;
+    [SerializeField] private int pointsDeVie = 1;
+    [SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private bool isVibrating = false; // Indicateur de vibration en cours
 
     TilemapRenderer _tilemapRenderer;
     TilemapCollider2D _tilemapCollider;
 
-    private bool isDead = false;
+    // Ajout du script de vibration
+    public float maxDisplacement = 0.01f;
+    public float vibrationSpeed = 5f;
 
-    [SerializeField] private float maxDisplacement = 0.03f;
-    [SerializeField] private float vibrationSpeed = 50f;
-    private Vector3 initialPosition;
+    private Vector3 lastPosition;
 
     void Awake()
     {
         _tilemapRenderer = GetComponent<TilemapRenderer>();
         _tilemapCollider = GetComponent<TilemapCollider2D>();
-        initialPosition = transform.position;
+        lastPosition = transform.position;
     }
 
     void Update()
     {
-        if (pointsDeVie <= 0 && !isDead)
+        if (pointsDeVie <= 0)
         {
-            StartCoroutine(Death());
+            if (!isVibrating)
+            {
+                StartCoroutine(Death());
+            }
+        }
+        else
+        {
+            if (transform.position != lastPosition)
+            {
+                lastPosition = transform.position;
+                if (isVibrating)
+                {
+                    StopCoroutine(Vibrate());
+                    isVibrating = false;
+                }
+            }
         }
     }
 
@@ -37,32 +52,39 @@ public class DecorScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Sword"))
         {
             pointsDeVie--;
-
-            StartCoroutine(Vibrate());
+            if(pointsDeVie >= 1)
+            {
+                if (!isVibrating)
+                {
+                    StartCoroutine(Vibrate());
+                }
+            }
         }
     }
 
     private IEnumerator Death()
     {
-        isDead = true;
+        isVibrating = true;
         _particleSystem.Play();
         _tilemapRenderer.enabled = false;
         _tilemapCollider.enabled = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 
     private IEnumerator Vibrate()
     {
+        isVibrating = true;
         float startTime = Time.time;
         while (Time.time - startTime < 0.5f)
         {
             float displacement = Mathf.Sin((Time.time - startTime) * vibrationSpeed) * maxDisplacement;
-            Vector3 newPosition = initialPosition;
+            Vector3 newPosition = transform.position;
             newPosition.x += displacement;
             transform.position = newPosition;
             yield return null;
         }
-        transform.position = initialPosition;
+        transform.position = lastPosition;
+        isVibrating = false;
     }
 }

@@ -5095,5 +5095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsDeVie: 2
   _particleSystem: {fileID: 4385796516567109059}
-  maxDisplacement: 0.03
+  isVibrating: 0
+  maxDisplacement: 0.01
   vibrationSpeed: 50
