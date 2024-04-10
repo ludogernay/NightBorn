@@ -11,9 +11,6 @@ public class Jump : MonoBehaviour
     private int maxJumps = 1; // Nombre maximum de sauts
     private bool isGrounded;
     private int jumpsLeft;
-
-    public static NightBorn instance;
-
     public void Start()
     {
         nightBornRB=GetComponent<Rigidbody2D>();

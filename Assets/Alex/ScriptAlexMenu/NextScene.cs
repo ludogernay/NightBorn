@@ -1,23 +1,31 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public void ChangeScene(string Scene)
+    public void ChangeScene(string sceneName)
     {
         // Charger la scène spécifiée
-        SceneManager.LoadScene(Scene);
+        SceneManager.LoadScene(sceneName);
+    }
+    
+    public void ReturnToLevel(string sceneName)
+    {
+        // Récupérer la dernière position du checkpoint via le singleton
+        Vector3 respawnPosition = CheckPointManager.Instance.GetLastCheckPointPosition();
+
+        // Charger la scène du niveau
+        SceneManager.LoadScene(sceneName);
+
+        // Replacer le joueur à la dernière position de checkpoint
+        check player = FindObjectOfType<check>();
+        if (player != null)
+        {
+            player.RespawnAtLastCheckPoint(respawnPosition);
+        }
+        else
+        {
+            Debug.LogError("PlayerController not found in the scene.");
+        }
     }
 }
-    // public void NxtScene()
-    // {
-    //     StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-    // }
-
-    // IEnumerator LoadLevel(int levelIndex)
-    // {
-    //     yield return new WaitForSeconds(1.0f);
-
-    //     SceneManager.LoadScene(levelIndex);
-    // }
