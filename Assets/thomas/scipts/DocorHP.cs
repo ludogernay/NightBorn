@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class DecorScript : MonoBehaviour
 {
-    [SerializeField] private int pointsDeVie = 1;
+    [SerializeField] private int pointsDeVie = 2;
 
     [SerializeField] ParticleSystem _particleSystem;
 

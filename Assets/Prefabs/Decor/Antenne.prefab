@@ -4900,7 +4900,7 @@ GameObject:
   - component: {fileID: 8510246395249574062}
   - component: {fileID: 6824071138683965950}
   - component: {fileID: 3080297661894864046}
-  - component: {fileID: 181115899884182908}
+  - component: {fileID: 7233792221909003485}
   m_Layer: 0
   m_Name: Antenne
   m_TagString: Untagged
@@ -5081,7 +5081,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &181115899884182908
+--- !u!114 &7233792221909003485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5095,8 +5095,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsDeVie: 2
   _particleSystem: {fileID: 4385796516567109059}
-  maxDisplacement: 0.1
-  vibrationSpeed: 5
-  vibrateX: 1
-  vibrateY: 0
-  vibrateZ: 0
+  maxDisplacement: 0.03
+  vibrationSpeed: 50
