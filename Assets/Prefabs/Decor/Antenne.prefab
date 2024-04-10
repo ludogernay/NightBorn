@@ -5093,5 +5093,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2be3f270081f1f4a8108f5934f13e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsDeVie: 1
+  pointsDeVie: 2
   _particleSystem: {fileID: 4385796516567109059}
+  maxDisplacement: 0.1
+  vibrationSpeed: 5
+  vibrateX: 1
+  vibrateY: 0
+  vibrateZ: 0

@@ -13,15 +13,17 @@ public class DecorScript : MonoBehaviour
 
     private bool isDead = false;
 
-
-
-
+    [SerializeField] private float maxDisplacement = 0.03f;
+    [SerializeField] private float vibrationSpeed = 50f;
+    private Vector3 initialPosition;
 
     void Awake()
     {
         _tilemapRenderer = GetComponent<TilemapRenderer>();
         _tilemapCollider = GetComponent<TilemapCollider2D>();
+        initialPosition = transform.position;
     }
+
     void Update()
     {
         if (pointsDeVie <= 0 && !isDead)
@@ -35,6 +37,8 @@ public class DecorScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Sword"))
         {
             pointsDeVie--;
+
+            StartCoroutine(Vibrate());
         }
     }
 
@@ -46,5 +50,19 @@ public class DecorScript : MonoBehaviour
         _tilemapCollider.enabled = false;
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
+    }
+
+    private IEnumerator Vibrate()
+    {
+        float startTime = Time.time;
+        while (Time.time - startTime < 0.5f)
+        {
+            float displacement = Mathf.Sin((Time.time - startTime) * vibrationSpeed) * maxDisplacement;
+            Vector3 newPosition = initialPosition;
+            newPosition.x += displacement;
+            transform.position = newPosition;
+            yield return null;
+        }
+        transform.position = initialPosition;
     }
 }

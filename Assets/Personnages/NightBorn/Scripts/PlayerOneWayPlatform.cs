@@ -14,8 +14,10 @@ public class PlayerOneWayPlatform : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
+            
             if (CurrentOneWayPlatform != null) 
             {
+                Debug.Log("passe à travers");
                 StartCoroutine(DisableCollision());
             }
         }
@@ -23,6 +25,7 @@ public class PlayerOneWayPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
             CurrentOneWayPlatform = collision.gameObject;
@@ -39,11 +42,13 @@ public class PlayerOneWayPlatform : MonoBehaviour
 
     private IEnumerator DisableCollision()
     {
-        TilemapCollider2D platformCollider = CurrentOneWayPlatform.GetComponent<TilemapCollider2D>();
+        Rigidbody2D platformCollider = CurrentOneWayPlatform.GetComponent<Rigidbody2D>();
 
-        Physics2D.IgnoreCollision(playerCollider, platformCollider);
+        //Physics2D.IgnoreCollision(playerCollider, platformCollider);
+        platformCollider.simulated = false;
         yield return new WaitForSeconds(0.25f);
-        Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
+        platformCollider.simulated = true;
+        //Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
     }
 
 }
