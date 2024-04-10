@@ -62,6 +62,7 @@ public class AttackController : MonoBehaviour
             elapsedTime = Time.time - startTime;
             float t = Mathf.Clamp01(elapsedTime / duration);
             bigBullet.transform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(2f, 2f, 2f), t);
+            dangerZone.transform.localScale = Vector3.Lerp(new Vector3(14.9263f, 0f, 1f), new Vector3(14.9263f, 2f, 1f), t);
             yield return null;
         }
 
