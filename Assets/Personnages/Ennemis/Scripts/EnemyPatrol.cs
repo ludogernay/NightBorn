@@ -9,12 +9,14 @@ public class EnemyPatrol : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Transform currentPoint;
+    [SerializeField]
+    private GameObject drone; 
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
-        rb = transform.Find("drone 1 Idle_0").GetComponent<Rigidbody2D>();
-        anim = transform.Find("drone 1 Idle_0").GetComponent<Animator>();
+        rb = drone.GetComponent<Rigidbody2D>();
+        anim = drone.GetComponent<Animator>();
         currentPoint = pointD.transform;
         anim.SetBool("isPatroling", true);
     }
