@@ -8,7 +8,7 @@ public class Jump : MonoBehaviour
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
     public float jumpForce;
-    private int maxJumps = 1; // Nombre maximum de sauts
+    private int maxJumps = 1;
     private bool isGrounded;
     private int jumpsLeft;
     public void Start()

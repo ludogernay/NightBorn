@@ -7,10 +7,17 @@ using UnityEngine.SceneManagement;
 public class IsDead : MonoBehaviour
 {
     public Transform player;
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (player.position.x < -15.2)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Ennemi") || other.CompareTag("Projectile"))
         {
             SceneManager.LoadScene("GameOver");
         }
