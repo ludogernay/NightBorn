@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5485562853407635603}
   - component: {fileID: 7029468507753530798}
-  - component: {fileID: 4552063341438349749}
   m_Layer: 0
   m_Name: drapeau
   m_TagString: Untagged
@@ -85,15 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4552063341438349749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6595975186181865490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50232ca48f889394980a26ceedfe0e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

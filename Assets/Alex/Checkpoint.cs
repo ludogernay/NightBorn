@@ -1,21 +1,28 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
+
 
 public class Checkpoint : MonoBehaviour
 {
+    [SerializeField] private GameObject tilemapRenderer;
+
+    private Vector3 respawnPosition;
+    
+
     void Start()
     {
-          GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         if (player != null)
         {
             // Récupérer la position de respawn depuis PlayerPrefs
             float respawnPositionX = PlayerPrefs.GetFloat("RespawnPositionX");
             float respawnPositionY = PlayerPrefs.GetFloat("RespawnPositionY");
-            Vector3 respawnPosition = new Vector3(respawnPositionX, respawnPositionY, player.transform.position.z);
+            respawnPosition = new Vector3(respawnPositionX, respawnPositionY, 0);
             
             // Déplacer le joueur à la position de respawn
-            player.transform.position = respawnPosition;
+            tilemapRenderer.transform.position = respawnPosition;
 
             Debug.Log("Player respawned at position: " + respawnPosition);
         }

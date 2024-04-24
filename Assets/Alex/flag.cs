@@ -1,15 +1,20 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class flag : MonoBehaviour
 {
+    [SerializeField] private GameObject tilemapRenderer;
+
+    private Vector3 Position;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Vector3 flagPosition = transform.position;
-            PlayerPrefs.SetFloat("LastFlagPositionX", flagPosition.x);
-            PlayerPrefs.SetFloat("LastFlagPositionY", flagPosition.y);
-             Debug.Log("Flag position: (" + flagPosition.x + ", " + flagPosition.y + ")");
+            Position = tilemapRenderer.transform.position;
+            PlayerPrefs.SetFloat("RespawnPositionX", Position.x);
+            PlayerPrefs.SetFloat("RespawnPositionY", Position.y);
+            Debug.Log("Flag position: (" + Position.x + ", " + Position.y + ")");
         }
     }
 }
