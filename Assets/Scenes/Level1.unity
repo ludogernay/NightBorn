@@ -322,11 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc7edd3aa1799d438564579d347a2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NightBorn_Sword: {fileID: 335378932}
-  NightBorn_Sword_AttackDuration: 1
-  NightBorn_Sword_AttackCooldown: 0
-  NightBorn_SwordIsActive: 0
-  AttackAnim: {fileID: 80455217}
+  nightBornSword: {fileID: 335378932}
+  attackDuration: 0.3
+  attackCooldown: 0.5
+  attackAnim: {fileID: 80455217}
+  swordIsActive: 0
 --- !u!114 &80455221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +371,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 80455219}
+  gameOverUI: {fileID: 0}
+  pauseMenuUI: {fileID: 0}
+  startPause: {fileID: 0}
+  progressBar: {fileID: 0}
+  timeText: {fileID: 0}
+  maxTime: 60
 --- !u!114 &298493036
 MonoBehaviour:
   m_ObjectHideFlags: 0

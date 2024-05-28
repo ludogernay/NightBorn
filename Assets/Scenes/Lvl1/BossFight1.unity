@@ -1154,6 +1154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde3d2505b7bb5a48a7b1b2762ee311c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundPrefab: {fileID: 1878576277}
+  MainCamera: {fileID: 1916746979}
+  firstground: {fileID: 1878576277}
 --- !u!1 &908634266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,6 +2032,11 @@ SpriteRenderer:
 --- !u!4 &1878576273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5587417802766797616, guid: 97a7d2db92612034e9a633561e503cbf, type: 3}
+  m_PrefabInstance: {fileID: 9052955855140592099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1839735485 &1878576277 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 1181851882034655463, guid: 97a7d2db92612034e9a633561e503cbf, type: 3}
   m_PrefabInstance: {fileID: 9052955855140592099}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1911245130
