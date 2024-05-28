@@ -2229,7 +2229,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9997563, y: 0.5654001, z: -10}
+  m_LocalPosition: {x: -4.99977, y: 0.5654001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12060,7 +12060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43490f4fbe127af41bf79000ea36e242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
 --- !u!114 &1879539172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12499,7 +12498,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &2054792821
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12962,7 +12961,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945227075798315080}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3fdcb7c6a4e7fc4598003b27412bc87, type: 3}
   m_Name: 
