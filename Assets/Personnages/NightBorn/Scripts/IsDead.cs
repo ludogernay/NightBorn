@@ -32,4 +32,6 @@ public class IsDead : MonoBehaviour
     {
         gameOverUI.SetActive(true);
     }
+
+    
 }
