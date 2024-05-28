@@ -1,34 +1,60 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class tirlaser : MonoBehaviour
 {
+    public GameObject spawnPoint; 
     public GameObject projectilePrefab;
     public Transform projectileParent;
     public float speed = 2f;
 
-    void Start()
+    private void Start()
     {
         StartCoroutine(ShootProjectile());
     }
 
-    IEnumerator ShootProjectile()
+    private IEnumerator ShootProjectile()
     {
         while (true)
         {
-            Vector3 spawnPosition = new Vector3(92f, -5.8f, 0f);
+            // Utilise la position du spawnPoint pour le spawn du projectile
+            Vector3 spawnPosition = spawnPoint.transform.position;
+
             GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity, projectileParent);
-            
-            while (projectile != null && projectile.transform.position.x > -20f)
+            Debug.Log("oui");
+
+            while (projectile != null)
             {
                 projectile.transform.Translate(Vector3.left * speed * Time.deltaTime);
+
+                // if (!IsProjectileInScreen(projectile.transform.position))
+                // {
+                //     Destroy(projectile); 
+                //     break;
+                // }
+
                 yield return null;
             }
-            
-            if(projectile != null)
-                Destroy(projectile);
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    private bool IsProjectileBehindPlayer(Vector3 position)
+    {
+        Vector3 playerScreenPos = Camera.main.WorldToScreenPoint(GameObject.FindGameObjectWithTag("Player").transform.position);
+
+        Vector3 projectileScreenPos = Camera.main.WorldToScreenPoint(position);
+
+        return projectileScreenPos.x < playerScreenPos.x;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 368066918}
   - component: {fileID: 368066917}
   - component: {fileID: 368066916}
+  - component: {fileID: 368066919}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -206,9 +207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 517289008}
+      - m_Target: {fileID: 368066919}
         m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
-        m_MethodName: ReturnToLevel
+        m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -256,6 +257,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368066914}
   m_CullTransparentMesh: 1
+--- !u!114 &368066919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368066914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50016d2fbbe36ab40be5ca3908270dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &507505519
 GameObject:
   m_ObjectHideFlags: 0
