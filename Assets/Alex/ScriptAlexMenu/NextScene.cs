@@ -3,13 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
+    private Vector3 Position;
     public void ChangeScene(string sceneName)
     {
-        // Charger la scène spécifiée
+        PlayerPrefs.SetFloat("RespawnPositionX", 0);
+        PlayerPrefs.SetFloat("RespawnPositionY", 0);
         SceneManager.LoadScene(sceneName);
-
-        // Vector3 lastFlagPosition = new Vector3(PlayerPrefs.GetFloat("LastFlagPositionX"), PlayerPrefs.GetFloat("LastFlagPositionY"), 0f);
-        // PlayerPrefs.SetFloat("RespawnPositionX", lastFlagPosition.x);
-        // PlayerPrefs.SetFloat("RespawnPositionY", lastFlagPosition.y);
     }
+
+    public void Resart(string sceneName)
+    {
+        
+        SceneManager.LoadScene(sceneName);
+    }
+
+
 }

@@ -810,6 +810,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemapRenderer: {fileID: 1945227075798315080}
+--- !u!1 &147358857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5321339067788029565, guid: dfeb2ebc576b736488b637e934b3d495, type: 3}
+  m_PrefabInstance: {fileID: 1166801695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &237918081
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,6 +2696,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7846636873416872632, guid: dfeb2ebc576b736488b637e934b3d495, type: 3}
+      propertyPath: drone
+      value: 
+      objectReference: {fileID: 147358857}
     m_RemovedComponents:
     - {fileID: 3394586428675352519, guid: dfeb2ebc576b736488b637e934b3d495, type: 3}
     m_RemovedGameObjects: []

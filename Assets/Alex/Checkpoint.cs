@@ -8,7 +8,6 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] private GameObject tilemapRenderer;
 
     private Vector3 respawnPosition;
-    
 
     void Start()
     {
@@ -20,6 +19,10 @@ public class Checkpoint : MonoBehaviour
             float respawnPositionX = PlayerPrefs.GetFloat("RespawnPositionX");
             float respawnPositionY = PlayerPrefs.GetFloat("RespawnPositionY");
             respawnPosition = new Vector3(respawnPositionX, respawnPositionY, 0);
+            if (respawnPosition.x == 0 && respawnPosition.y == 0)
+            {
+                respawnPosition = tilemapRenderer.transform.position;
+            }
             
             // Déplacer le joueur à la position de respawn
             tilemapRenderer.transform.position = respawnPosition;
