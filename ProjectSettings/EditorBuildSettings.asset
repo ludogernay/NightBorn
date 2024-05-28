@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: ef3ba9a4ff9103f49adb04bd4e812556
+  - enabled: 1
+    path: Assets/Scenes/Lvl1/Cutscenes/BossCutscene.unity
+    guid: b02352ff1ad77564a95283f11a926569
+  - enabled: 1
+    path: Assets/Scenes/Lvl1/BossFight1.unity
+    guid: ab84db08c313c9c4ba2af8beb75dabf8
   m_configObjects: {}
