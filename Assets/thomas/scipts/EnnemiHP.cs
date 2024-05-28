@@ -1,33 +1,47 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class EnnemiHP : MonoBehaviour
 {
     [SerializeField] private int pointsDeVie = 1;
+    [SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private bool isVibrating = false;
 
-    [SerializeField] ParticleSystem _particleSystem;
+    [SerializeField]SpriteRenderer _spriteRenderer;
+    Collider2D _polygonCollider;
 
-    SpriteRenderer _SpriteRenderer;
-    Collider2D _Collider;
+    public float maxDisplacement = 0.01f;
+    public float vibrationSpeed = 5f;
 
-    private bool isDead = false;
-
-
-
-
+    private Vector3 lastPosition;
 
     void Awake()
     {
-        _SpriteRenderer = GetComponent<SpriteRenderer>();
-        _Collider = GetComponent<Collider2D>();
+        _polygonCollider = GetComponent<Collider2D>();
+        lastPosition = transform.position;
     }
+
     void Update()
     {
-        if (pointsDeVie <= 0 && !isDead)
+        if (pointsDeVie <= 0)
         {
-            StartCoroutine(Death());
+            if (!isVibrating)
+            {
+                StartCoroutine(Death());
+            }
+        }
+        else
+        {
+            if (transform.position != lastPosition)
+            {
+                lastPosition = transform.position;
+                if (isVibrating)
+                {
+                    StopCoroutine(Vibrate());
+                    isVibrating = false;
+                }
+            }
         }
     }
 
@@ -36,16 +50,39 @@ public class EnnemiHP : MonoBehaviour
         if (collision.gameObject.CompareTag("Sword"))
         {
             pointsDeVie--;
+            if (pointsDeVie >= 1)
+            {
+                if (!isVibrating)
+                {
+                    StartCoroutine(Vibrate());
+                }
+            }
         }
     }
 
     private IEnumerator Death()
     {
-        isDead = true;
+        isVibrating = true;
         _particleSystem.Play();
-        _SpriteRenderer.enabled = false;
-        _Collider.enabled = false;
-        yield return new WaitForSeconds(1);
+        _spriteRenderer.enabled = false;
+        _polygonCollider.enabled = false;
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+    }
+
+    private IEnumerator Vibrate()
+    {
+        isVibrating = true;
+        float startTime = Time.time;
+        while (Time.time - startTime < 0.5f)
+        {
+            float displacement = Mathf.Sin((Time.time - startTime) * vibrationSpeed) * maxDisplacement;
+            Vector3 newPosition = transform.position;
+            newPosition.x += displacement;
+            transform.position = newPosition;
+            yield return null;
+        }
+        transform.position = lastPosition;
+        isVibrating = false;
     }
 }

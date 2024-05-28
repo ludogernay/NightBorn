@@ -8,9 +8,6 @@ public class IsDead : MonoBehaviour
 {
     public Transform player;
     [SerializeField] private GameObject gameOverUI;
-
-    [SerializeField] private BoxCollider2D DeathZone;
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (player.position.x < -15.2 || player.position.y <= -11)

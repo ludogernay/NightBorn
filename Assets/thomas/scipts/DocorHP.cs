@@ -6,12 +6,11 @@ public class DecorScript : MonoBehaviour
 {
     [SerializeField] private int pointsDeVie = 1;
     [SerializeField] private ParticleSystem _particleSystem;
-    [SerializeField] private bool isVibrating = false; // Indicateur de vibration en cours
+    [SerializeField] private bool isVibrating = false;
 
     TilemapRenderer _tilemapRenderer;
     TilemapCollider2D _tilemapCollider;
 
-    // Ajout du script de vibration
     public float maxDisplacement = 0.01f;
     public float vibrationSpeed = 5f;
 
