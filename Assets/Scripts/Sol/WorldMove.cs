@@ -8,7 +8,6 @@ public class WorldMove : MonoBehaviour
 
     public float speedGround ;
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         wall.transform.position = new Vector2(wall.transform.position.x - speedGround, wall.transform.position.y);

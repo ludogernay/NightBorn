@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Personnages/Ennemis/Animations/drone1Idle.anim.meta
+guid: 15444b4718b306547a12888ebfbe0bad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+========
+guid: 545d7b2c3bdc5864f996b4d3eefc302b
+TextScriptImporter:
+  externalObjects: {}
+>>>>>>>> origin/Tim:Assets/TIM/Background/City/License.txt.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

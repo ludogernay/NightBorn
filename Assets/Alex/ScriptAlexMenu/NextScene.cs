@@ -1,23 +1,21 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public void ChangeScene(string Scene)
+    private Vector3 Position;
+    public void ChangeScene(string sceneName)
     {
-        // Charger la scène spécifiée
-        SceneManager.LoadScene(Scene);
+        PlayerPrefs.SetFloat("RespawnPositionX", 0);
+        PlayerPrefs.SetFloat("RespawnPositionY", 0);
+        SceneManager.LoadScene(sceneName);
     }
+
+    public void Resart(string sceneName)
+    {
+        
+        SceneManager.LoadScene(sceneName);
+    }
+
+
 }
-    // public void NxtScene()
-    // {
-    //     StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-    // }
-
-    // IEnumerator LoadLevel(int levelIndex)
-    // {
-    //     yield return new WaitForSeconds(1.0f);
-
-    //     SceneManager.LoadScene(levelIndex);
-    // }
