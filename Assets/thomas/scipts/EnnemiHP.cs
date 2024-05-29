@@ -7,6 +7,7 @@ public class EnnemiHP : MonoBehaviour
     [SerializeField] private int pointsDeVie = 1;
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private bool isVibrating = false;
+    [SerializeField] private float particleMoveSpeed = 5f;
 
     [SerializeField]SpriteRenderer _spriteRenderer;
     Collider2D _polygonCollider;
@@ -63,6 +64,14 @@ public class EnnemiHP : MonoBehaviour
     private IEnumerator Death()
     {
         isVibrating = true;
+
+        var emission = _particleSystem.emission;
+        emission.enabled = true;
+
+        var velocityOverLifetime = _particleSystem.velocityOverLifetime;
+        velocityOverLifetime.enabled = true;
+        velocityOverLifetime.x = new ParticleSystem.MinMaxCurve(-particleMoveSpeed);
+
         _particleSystem.Play();
         _spriteRenderer.enabled = false;
         _polygonCollider.enabled = false;

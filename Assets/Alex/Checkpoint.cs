@@ -15,7 +15,6 @@ public class Checkpoint : MonoBehaviour
 
         if (player != null)
         {
-            // Récupérer la position de respawn depuis PlayerPrefs
             float respawnPositionX = PlayerPrefs.GetFloat("RespawnPositionX");
             float respawnPositionY = PlayerPrefs.GetFloat("RespawnPositionY");
             respawnPosition = new Vector3(respawnPositionX, respawnPositionY, 0);
@@ -24,7 +23,6 @@ public class Checkpoint : MonoBehaviour
                 respawnPosition = tilemapRenderer.transform.position;
             }
             
-            // Déplacer le joueur à la position de respawn
             tilemapRenderer.transform.position = respawnPosition;
 
             Debug.Log("Player respawned at position: " + respawnPosition);

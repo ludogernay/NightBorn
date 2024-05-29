@@ -81,6 +81,7 @@ MonoBehaviour:
   pointsDeVie: 1
   _particleSystem: {fileID: 7969207947160685040}
   isVibrating: 0
+  particleMoveSpeed: 20
   _spriteRenderer: {fileID: 448790612698474558}
   maxDisplacement: 0.01
   vibrationSpeed: 5
@@ -96,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fa40d359822414f8db3058d16644e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedOut: 7.5
-  speed: 6.5
+  speedOut: 0
+  speed: 0
   drone: {fileID: 3771196828754484657}
   targetCamera: {fileID: 0}
   _spriteRenderer: {fileID: 448790612698474558}
@@ -155,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 1244802678, guid: f9bb847c80437a54bb881ed772439249, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

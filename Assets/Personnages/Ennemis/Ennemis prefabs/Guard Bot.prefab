@@ -5101,7 +5101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedOut: 7.5
-  speed: 6.5
+  speed: 7.5
   drone: {fileID: 8743837601704807515}
   targetCamera: {fileID: 0}
   _spriteRenderer: {fileID: 9205380273486640280}
