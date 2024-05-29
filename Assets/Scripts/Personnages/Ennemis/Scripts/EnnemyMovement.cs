@@ -24,15 +24,12 @@ public class EnnemyMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Time.time);
         if (IsVisibleFrom(_spriteRenderer, targetCamera))
         {
-            Debug.Log("visible");
             rb.velocity = new Vector2(-speed, 0);
         }
         else
         {
-            Debug.Log("invisible");
             rb.velocity = new Vector2(-speedOut, 0);
         }
     }
